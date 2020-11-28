@@ -1,0 +1,43 @@
+<div *ngIf="product">
+  <div class="row">
+    <div class="col-xs-12">
+      <img [src]="product.imageUrl" [alt]="product.name" class="img-responsive"
+           style="max-height: 300px">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{product.name}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="btn-group">
+        <button class="btn btn-primary"
+                style="cursor: pointer; margin-right: 2rem"
+                (click)="onEditProduct()">Edit Product
+        </button>
+        <button class="btn btn-danger"
+                style="cursor: pointer"
+                (click)="onDeleteProduct()"
+        >Delete Product
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      Description: {{product.description}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      Price: {{product.price}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      Quantity: {{product.quantity}}
+    </div>
+  </div>
+</div>
